@@ -4,7 +4,7 @@
 <!--
  - @author  Michal Mikoláš <nanuqcz@gmail.com>
  - @author  Jiri Petruzelka <petruzelka@nox-art.cz>
- - @license CC BY <http://creativecommons.org/licenses/by/3.0/cz/>
+ - @license CC BY-SA <http://creativecommons.org/licenses/by-sa/3.0/>
  -->
 <dict>  <!-- Latte syntax definition -->
 	<key>fileTypes</key>
