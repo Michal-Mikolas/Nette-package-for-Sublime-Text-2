@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{\$title} | ${1:FooWeb}</title>
+
+	<meta name="description" content="$1">
+	<meta name="keywords" content="$1">
+	<meta name="robots" content="all,follow">
+	<meta name="author" content="$TM_FULLNAME">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="{\$basePath}/js/netteForms.js"></script>
+
+	<link rel="stylesheet" href="http://blueprintcss.org/blueprint/screen.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{\$basePath}/css/style.css">
+
+	{block head}{/block}
+</head>
+<body>
+	<header>
+	</header>
+	
+	<div id="content">
+		<div n:foreach="\$flashes as \$flash" class="flash {\$flash->type}">{\$flash->message}</div>
+		{block content}{/block}
+	</div>
+
+	<footer>
+	</footer>
+</body>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nlayout</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.latte</scope>
+</snippet>

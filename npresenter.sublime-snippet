@@ -1,0 +1,74 @@
+<snippet>
+	<content><![CDATA[
+use Nette\Application\UI\Form;
+
+
+/**
+ * ${1:Foo}sPresenter
+ *
+ * @author  $TM_FULLNAME
+ */
+class $1sPresenter extends BasePresenter
+{
+	
+	public function renderDefault()
+	{
+		\$this->template->${2:foo}s = \$this->context->$2sModel->get$1s();
+	}
+
+
+	public function renderDetail(\$id)
+	{
+		\$this->template->$2 = \$this->context->$2sModel->get$1(\$id);
+	}
+
+
+	public function renderAdd()
+	{
+	}
+
+
+	public function renderEdit(\$id)
+	{
+	}
+
+
+	protected function createComponentFooForm()
+	{
+		\$form = new Form();
+		\$form->addText('name', 'Název')
+			->addRule(Form::FILLED, 'Vyplňte prosím název.');
+		\$form->addSubmit('send', 'Odeslat');
+
+		\$form->onSuccess[] = callback(\$this, "handleFooFormSubmitted");
+
+		return \$form;
+	}
+
+
+	public function handleFooFormSubmitted(Form \$form)
+	{
+		\$values = \$form->getValues();
+
+		if (\$this->getParam('id')) {
+			// update
+			\$this->context->$2sModel->update(\$this->getParam('id'), \$values);
+			\$this->flashMessage('Položka úspěšně vložena.');
+		} else {
+			// create
+			\$this->context->$2sModel->insert(\$values);
+			\$this->flashMessage('Položka úspěšně upravena.');
+		}
+
+		$this->redirect('this');
+	}
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>npresenter</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Nette presenter</description>
+</snippet>
