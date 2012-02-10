@@ -1,6 +1,6 @@
 Nette package for Sublime Text 2
 ================================
-Latte syntax definition, code completions and snippets for [Sublime Text 2](http://www.sublimetext.com/)
+[Nette framework](http://nette.org) support for [Sublime Text 2](http://www.sublimetext.com/). Latte syntax definition, code completions and snippets.
 
 
 Install
