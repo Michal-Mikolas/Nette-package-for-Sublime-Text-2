@@ -102,7 +102,7 @@
 				</dict>
 				<dict>  <!-- Operators -->
 					<key>match</key>
-					<string>\!|and|or|===|!==|&gt;=|&lt;=|&lt;&gt;|&gt;|&lt;|==|!=|true|false|\+|\-|\*|/|%</string>  <!-- @todo bug: {$foo = $bar + 1 + 2 + 3} -->
+					<string>\!|and|or|===|!==|&gt;=|&lt;=|&lt;&gt;|&gt;|&lt;|==|!=|true|false|\+|\-|\*|/|%</string>
 					<key>name</key>
 					<string>keyword.operator</string>
 				</dict>
@@ -137,20 +137,16 @@
 					</dict>
 				</dict>
 				<dict>  <!-- Strings -->
-					<key>match</key>
-					<string>.*?(["'].*?["'])</string>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>string</string>
-						</dict>
-					</dict>
+					<key>begin</key>
+					<string>'</string>
+					<key>end</key>
+					<string>'</string>
+					<key>name</key>
+					<string>string.quoted.single.latte</string>
 				</dict>
 				<dict>  <!-- Whatever else between { and } -->
 					<key>match</key>
-					<string>([^}$]|\s)+</string>
+					<string>([^}$]|\s)</string>
 					<key>name</key>
 					<string>source.latte</string>
 				</dict>
