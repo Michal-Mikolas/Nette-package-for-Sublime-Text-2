@@ -9,7 +9,7 @@ use Nette\Application\UI\Form;
  * @author  $TM_FULLNAME
  */
 class $1sPresenter extends BasePresenter
-{
+{$0
 	
 	public function renderDefault()
 	{
@@ -60,7 +60,7 @@ class $1sPresenter extends BasePresenter
 			\$this->flashMessage('Položka úspěšně upravena.');
 		}
 
-		$this->redirect('this');
+		\$this->redirect('this');
 	}
 
 }
