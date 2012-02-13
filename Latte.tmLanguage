@@ -137,24 +137,12 @@
 					</dict>
 				</dict>
 				<dict>  <!-- Strings -->
-					<key>begin</key>
-					<string>'</string>
-					<key>end</key>
-					<string>'</string>
-					<key>name</key>
-					<string>string.quoted.single.latte</string>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>"</string>
-					<key>end</key>
-					<string>"</string>
-					<key>name</key>
-					<string>string.quoted.double.latte</string>
+					<key>include</key>
+					<string>#strings</string>
 				</dict>
 				<dict>  <!-- Whatever else between { and } -->
 					<key>match</key>
-					<string>([^}$]|\s)</string>
+					<string>([^}]|\s)</string>
 					<key>name</key>
 					<string>source.latte</string>
 				</dict>
