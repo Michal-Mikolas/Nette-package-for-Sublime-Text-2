@@ -165,6 +165,7 @@
 			<key>name</key>
 			<string>variable.other.global.latte</string>
 		</dict>
+		
 		<key>strings</key>  <!-- Strings -->
 		<dict>
 			<key>patterns</key>
