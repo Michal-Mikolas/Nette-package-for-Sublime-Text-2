@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+use Nette\Application\UI\Control;
+
+/**
+ * ${1:Foo} componet
+ *
+ * @author  $TM_FULLNAME
+ */
+class $1Control extends Control
+{
+
+	public function render()
+	{
+		\$this->template->setFile(__DIR__ . '/${1:Foo}Control.latte');
+		\$this->template->foo = "Hello world!";$0
+
+		\$this->template->render();
+	}
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nette-control</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Nette control class(renderable component)</description>
+</snippet>
