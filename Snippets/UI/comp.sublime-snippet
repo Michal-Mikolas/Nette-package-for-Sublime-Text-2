@@ -3,9 +3,9 @@
 /**
  * @return ${3:\Nette\Application\UI\Control}
  */
-protected function createComponent${1:Name}(${2:$name})
+protected function createComponent${1:Name}(${2:\$name})
 {
-	\$comp = new ${3}(${4:$this}, ${2:$name});
+	\$comp = new ${3}(${4:\$this}, ${2});
 
 	return \$comp;
 }
