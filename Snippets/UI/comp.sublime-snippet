@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
 /**
- * @return ${3:\Nette\Application\UI\Control}
+ * @return ${2:\Nette\Application\UI\Control}
  */
-protected function createComponent${1:Name}(${2:\$name})
+protected function createComponent${1:Name}()
 {
-	\$comp = new ${3}(${4:\$this}, ${2});
+	\$comp = new ${2};
 
 	return \$comp;
 }
