@@ -142,7 +142,7 @@
 				</dict>
 				<dict>  <!-- Whatever else between { and } -->
 					<key>match</key>
-					<string>([^}]|\s)</string>
+					<string>[a-zA-Z]+|[^}]|\s</string>
 					<key>name</key>
 					<string>source.latte</string>
 				</dict>
