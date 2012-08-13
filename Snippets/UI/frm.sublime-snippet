@@ -10,7 +10,7 @@ protected function createComponent${1:Name}Form()
 
 	\$form->addSubmit('sub');
 
-	\$form->onSuccess[] = callback($this, 'process${1}Form');
+	\$form->onSuccess[] = callback(\$this, 'process${1}Form');
 
 	return \$form;
 }
@@ -18,7 +18,7 @@ protected function createComponent${1:Name}Form()
 /**
  * @param ${2:\Nette\Application\UI\Form}
  */
-public function process${1}Form(${2} $form)
+public function process${1}Form(${2} \$form)
 {
 	\$values = \$form->getValues();
 
