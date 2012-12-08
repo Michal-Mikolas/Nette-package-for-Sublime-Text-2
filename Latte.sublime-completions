@@ -35,6 +35,38 @@
 		{ "trigger": "contentType", "contents": "{contentType ${1:application/xml}}\n$0" },
 		{ "trigger": "status", "contents": "{status ${1:500}}\n$0" },
 		{ "trigger": "dump", "contents": "{dump \\$${1:var}}\n$0" },
-		{ "trigger": "debugbreak", "contents": "{debugbreak \\$${1:cond}}\n$0" }
+		{ "trigger": "debugbreak", "contents": "{debugbreak \\$${1:cond}}\n$0" },
+
+		// Default Helpers
+		// String modification
+		{ "trigger": "|truncate", "contents": "|truncate:${1:length}${2:,'${3:append}'}" },
+		{ "trigger": "|substr", "contents": "|substr:${1:offset}${2:,${3:length}}" },
+		{ "trigger": "|trim", "contents": "|trim${1::'${2:charset}'}" },
+		"|striptags",
+		"|strip",
+		{ "trigger": "|webalize", "contents": "|webalize${1::'${2:charlist}'${3:,${4:lower}}}" },
+		"|toAscii",
+		{ "trigger": "|indent", "contents": "|indent${1::${2:level}${3:,'${4:char}'}}" },
+		{ "trigger": "|replace", "contents": "|replace:'${1:search}'${2:,'${3:replace}'}" },
+		{ "trigger": "|replaceRE", "contents": "|replaceRE:'${1:pattern}'${2:,'${3:replace}'}" },
+		{ "trigger": "|padLeft", "contents": "|padLeft:${1:length}${2:,'${3:pad}'}" },
+		{ "trigger": "|padRight", "contents": "|padRight:${1:length}${2:,'${3:pad}'}" },
+		{ "trigger": "|repeat", "contents": "|repeat:${1:count}" },
+		{ "trigger": "|implode", "contents": "|implode:'${1:glue}'" },
+		"|nl2br",
+		// Letter casing
+		"|lower",
+		"|upper",
+		"|firstUpper",
+		"|capitalize",
+		// Formatting
+		{ "trigger": "|date", "contents": "|date:'${1:format}'" },
+		{ "trigger": "|number", "contents": "|number${1::${2:decimals}${3:,'${4:decPoint}'${5:,'${6:thousandsSep}'}}}" },
+		{ "trigger": "|bytes", "contents": "|bytes${1::${2:precision}}" },
+		// Other
+		{ "trigger": "|dataStream", "contents": "|dataStream${1::${2:mimetype}}" },
+		"|url",
+		"|length",
+		"|null"
 	]
 }
