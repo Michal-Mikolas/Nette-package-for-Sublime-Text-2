@@ -4,6 +4,6 @@
 	"completions":
 	[
 		{ "trigger": "inject", "contents": "/** @var ${1} */\nprivate \\$${1/(\\w?)(.*)/?1:\\L$1(?2:\\E$2)/g};\n\n/**\n * Method for inject ${1}. \n * @param\t${1}\t\\$${1/(\\w?)(.*)/?1:\\L$1(?2:\\E$2)/g}\n */\npublic function inject${1}(${1} \\$${1/(\\w?)(.*)/?1:\\L$1(?2:\\E$2)/g})\n{\n\t\\$this->${1/(\\w?)(.*)/?1:\\L$1(?2:\\E$2)/g} = \\$${1/(\\w?)(.*)/?1:\\L$1(?2:\\E$2)/g};\n}" },
-		{ "trigger": "debugger", "contents": "\\Nette\\Diagnostics\\Debugger::bardump(${1:variable}${2:,${3:name}});"}
+		{ "trigger": "barDump", "contents": "\\Nette\\Diagnostics\\Debugger::bardump(${1:variable}${2:,${3:name}});"}
 	]
 }
