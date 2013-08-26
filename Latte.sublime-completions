@@ -27,7 +27,7 @@
 		{ "trigger": "plink", "contents": "{plink ${1:Default}}\n$0" },
 		{ "trigger": "control", "contents": "{control ${1:foo}}\n$0" },
 		{ "trigger": "form", "contents": "{form ${1:foo}}\n$0\n{/form}" },
-		{ "trigger": "label", "contents": "{label ${1:foo}}\n$0\n{/form}" },
+		{ "trigger": "label", "contents": "{label ${1:foo} /}\n" },
 		{ "trigger": "input", "contents": "{input ${1:foo}}\n$0" },
 		{ "trigger": "syntax", "contents": "{syntax ${1:mode}}\n$0\n{/syntax}" },
 		{ "trigger": "l", "contents": "{l}$0" },
