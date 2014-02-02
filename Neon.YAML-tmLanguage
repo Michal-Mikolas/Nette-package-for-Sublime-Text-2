@@ -1,0 +1,67 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Neon
+scopeName: source.neon
+fileTypes: [neon]
+uuid: dac5b712-3e47-4e5c-8ba9-710f64722991
+
+patterns:
+
+# Comments
+- begin: (#)
+  end: $
+  name: comment.line.number-sign.neon
+  patterns:
+  # Anotace
+  - match: (?<=\s)\@[a-zA-Z_-]+
+    name: keyword.other.phpdoc
+
+- include: '#variables'
+
+# Numbers
+- match: (?<=:|\s)\d+(?=\s|$)
+  name: constant.language.neon
+
+# Boolean constants
+- match: (?<=:|\s)(true|True|TRUE|yes|Yes|YES|on|On|ON|false|False|FALSE|no|No|NO|off|Off|OFF|null|Null|NULL)(\s*$)
+  name: constant.language.neon
+
+# Tree leaves
+- match: ^\s*([a-zA-Z._-]*)(:)(?=\s*\S+)
+  captures:
+    '1': {name: support.other.neon}
+    '2': {name: keyword.operator.neon}
+  name: keyword.control.neon
+
+# Tree
+- match: ^\s*([a-zA-Z._-]*)(:)
+  captures:
+    '1': {name: entity.name.function.neon}
+    '2': {name: keyword.operator.neon}
+  name: keyword.control.neon
+
+# Bullets
+- match: ^\s*(-)
+  captures:
+    '1': {name: keyword.operator.neon}
+
+# Factory instances
+- match: (@\w+)
+  name: support.class.neon
+
+# Strings
+- name: string.quoted.double.neon
+  begin: (["'])
+  end: (\1)
+  patterns:
+  - include: '#variables'
+
+
+repository:
+
+  # Variables
+  variables:
+    name: variable.parameter.neon
+    match: (%.*?%)
+
+...
